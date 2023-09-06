@@ -1,0 +1,28 @@
+.NavContainer_0{
+    background-color: var(--topNavbg);
+    padding: 1.2em 0.4em; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+.NavContainer_0 ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.NavContainer_0 *[id="lg"]{
+    display: none;
+}
+@media screen and (min-width:640px) {
+    .NavContainer_0{
+        padding: 1.5em 1em; 
+
+    }
+    .NavContainer_0 *[id="lg"]{
+        display: flex;
+    }
+    .NavContainer_0 *[id="mobile"]{
+        display: none;
+    }
+}
