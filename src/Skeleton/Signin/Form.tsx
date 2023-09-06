@@ -43,7 +43,7 @@ function Form() {
     const data = await fetch(
       process.env.NODE_ENV != "production"
         ? "/api/signin"
-        : window.location.origin + "/api/signup",
+        : window.location.origin + "/api/signin",
       {
         method: "POST",
         body: JSON.stringify(body),
