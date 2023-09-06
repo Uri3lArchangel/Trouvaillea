@@ -22,7 +22,7 @@ tabledata.map((i,index)=>(
   <tr key={index}>
   <td>{i.userId}</td>
   <td>${(i.price).toLocaleString()}</td>
-  <td>${((26000/i.price)*parseFloat(currentPrice)-26).toFixed(2)}</td>
+  <td>${parseFloat(((26000/i.price)*parseFloat(currentPrice)-26).toFixed(2)).toLocaleString()}</td>
 </tr>
 ))
     }
