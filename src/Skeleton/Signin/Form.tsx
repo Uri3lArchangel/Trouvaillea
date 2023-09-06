@@ -12,7 +12,7 @@ function Form() {
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
 
-  const pwdVisibility = (a: string) => {
+  const PwdVisibility = (a: string) => {
     if (pwdShow) {
       const pwdElement = document.getElementById(a) as HTMLInputElement;
       pwdElement.type = "password";
@@ -24,7 +24,7 @@ function Form() {
     setPwdState(true);
   };
 
-  const submitForm = async (e: React.MouseEvent<HTMLInputElement>) => {
+  const submiSignintForm = async (e: React.MouseEvent<HTMLInputElement>) => {
     message.destroy();
     notification.destroy();
     message.loading("Signing In Please Wait", 10000);
@@ -97,7 +97,7 @@ function Form() {
           <AiFillEyeInvisible
             className=" cursor-pointer"
             onClick={() => {
-              pwdVisibility("pass");
+              PwdVisibility("pass");
             }}
             size={30}
           />
@@ -105,7 +105,7 @@ function Form() {
           <AiFillEye
             className=" cursor-pointer"
             onClick={() => {
-              pwdVisibility("pass");
+              PwdVisibility("pass");
             }}
             size={30}
           />
@@ -117,7 +117,7 @@ function Form() {
       <input
         type="submit"
         value="Sign in"
-        onClick={submitForm}
+        onClick={submiSignintForm}
         className="bg-green-500 h-12 w-fit px-6 cursor-pointer"
       />
     </form>
