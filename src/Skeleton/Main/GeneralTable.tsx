@@ -30,8 +30,8 @@ tabledata.map((i,index)=>(
         j.Positions.map((i,index)=>
         <tr key={index}>
             <td>#{i.UUID}</td>
-            <td>${(i.EntryPrice.toFixed(2)).toLocaleString()}</td>
-            <td>${((26000/i.EntryPrice)*parseFloat(currentPrice)-26).toFixed(2)}</td>
+            <td>${parseFloat(i.EntryPrice.toFixed(2)).toLocaleString()}</td>
+            <td>${parseFloat(((26000/i.EntryPrice)*parseFloat(currentPrice)-26).toFixed(2)).toLocaleString()}</td>
         </tr>)
     ))}
   </table>

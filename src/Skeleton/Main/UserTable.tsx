@@ -21,7 +21,7 @@ function UserTable({currentPrice,data,useruuid}:{currentPrice:string,data:{Posit
         useruuid == i.UUID?<tr key={index}>
             <td>#{i.UUID}</td>
             <td>${(i.EntryPrice.toFixed(2)).toLocaleString()}</td>
-            <td>${((26000/i.EntryPrice)*parseFloat(currentPrice)-26).toFixed(2)}</td>
+            <td>${parseFloat(((26000/i.EntryPrice)*parseFloat(currentPrice)-26).toFixed(2)).toLocaleString()}</td>
         </tr>:<></>))
     ))}
   </table>
