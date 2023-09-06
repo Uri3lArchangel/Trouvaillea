@@ -5,7 +5,7 @@ import { NotificationContext } from '@/src/context/Notification/Notification'
 import { MessageContext } from '@/src/context/message/MesageContex'
 import React, { useContext } from 'react'
 
-function page() {
+const page=()=> {
   const notification= useContext(NotificationContext)!
   const message = useContext(MessageContext)!
   const resend = async()=>{
@@ -26,7 +26,8 @@ message.loading("Resending Verification Mail",10000)
    
   }
   return (
-    <MainLayout>
+    <>   
+     <MainLayout>
       <article className='text-center space-y-6 py-10'>
         <h1 className='text-xl font-bold'>Verify Your Email Address</h1>
         <p className='text-lg px-1'>We Have Sent A Verification Email to Your Email Address Open It And Follow The Instructions</p>
@@ -40,6 +41,8 @@ message.loading("Resending Verification Mail",10000)
         </div>
         </article>
     </MainLayout>
+    </>
+
   )
 }
 

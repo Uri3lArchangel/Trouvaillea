@@ -36,6 +36,7 @@ function page() {
 
 
   return (
+    <>
     <MainLayout>
       <article className='text-center space-y-6 py-10'>
         <h1 className='text-xl font-bold'>Password Reset</h1>
@@ -47,6 +48,7 @@ function page() {
         </div>
         </article>
     </MainLayout>
+    </>
   )
 }
 
