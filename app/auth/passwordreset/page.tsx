@@ -5,7 +5,7 @@ import { MessageContext } from '@/src/context/message/MesageContex';
 import React, { useContext, useRef } from 'react'
 
 
-function page() {
+function Page() {
   const message = useContext(MessageContext)!;
   const notification = useContext(NotificationContext)!;
     const emailRef=useRef<HTMLInputElement>(null)
@@ -32,7 +32,7 @@ function page() {
               notification.error({message:res.message})
             }
         }
-    }
+      }
 
 
   return (
@@ -52,4 +52,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

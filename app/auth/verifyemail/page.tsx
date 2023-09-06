@@ -5,7 +5,7 @@ import { NotificationContext } from '@/src/context/Notification/Notification'
 import { MessageContext } from '@/src/context/message/MesageContex'
 import React, { useContext } from 'react'
 
-const page=()=> {
+const Page=()=> {
   const notification= useContext(NotificationContext)!
   const message = useContext(MessageContext)!
   const resend = async()=>{
@@ -46,4 +46,4 @@ message.loading("Resending Verification Mail",10000)
   )
 }
 
-export default page
+export default Page
